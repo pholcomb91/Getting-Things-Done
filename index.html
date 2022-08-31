@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <script src="./moment.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -23,22 +28,24 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="1a" class="lead"></p>
     </header>
-    <div class="container row">
+    <div class="container-fluid row mx-auto">
       <!-- Timeblocks go here -->
-      <ul class="list-group col" >
-        <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
-        <li class="list-group-item" id="9A" >A second item</li>
-        <li class="list-group-item" onclick="editToDo">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
+      <ul class="list-group col-2 m-0 p-0" >
+        <li id= eightAm class="list-group-item"></li>
+        <li id= nineAm class="list-group-item"></li>
+        <li id= tenAm class="list-group-item"></li>
+        <li id= elevenAm class="list-group-item">11 AM</li>
+        <li id= twelvePm class="list-group-item">12 PM</li>
+        <li id= onePm class="list-group-item">1 PM</li>
+        <li id= twoPm class="list-group-item">2 PM</li>
+        <li id= threePm class="list-group-item">3 PM</li>
+        <li id= fourPm class="list-group-item">4 PM</li>
+        <li id= fivePm class="list-group-item">5 PM</li>
       </ul>
-      <ul class="list-group col" contenteditable="true">
-        <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
+      <ul class="list-group col-7 m-0 p-0" contenteditable="true">
+        <li class="list-group-item disabled">A disabled item</li>
         <li class="list-group-item" >second column</li>
         <li class="list-group-item" >A third item</li>
         <li class="list-group-item">A fourth item</li>
@@ -46,20 +53,23 @@
         <li class="list-group-item">A third item</li>
         <li class="list-group-item">A fourth item</li>
         <li class="list-group-item">And a fifth one</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
       </ul>
-      <ul class="list-group col">
-        <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
-        <li class="list-group-item disabled">A second item</li>
-        <li class="list-group-item list-group-item-success">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
+      <ul class="list-group col-3 m-0 p-0">
+        <a href="#" class="list-group-item list-group-item-action">Save</a>
+        <a href="#" class="list-group-item list-group-item-action">Save</a>
+        <a href="#" class="list-group-item list-group-item-action">Save</a>
+        <a href="#" class="list-group-item list-group-item-action">Save</a>
+        <a href="#" class="list-group-item list-group-item-action">Save</a>
+        <a href="#" class="list-group-item list-group-item-action">Save</a>
+        <a href="#" class="list-group-item list-group-item-action">Save</a>
+        <a href="#" class="list-group-item list-group-item-action">Save</a>
+        <a href="#" class="list-group-item list-group-item-action">Save</a>
+        <a href="#" class="list-group-item list-group-item-action">Save</a>
       </ul>
     </div>
-    <script src="./script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
