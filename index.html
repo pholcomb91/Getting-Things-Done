@@ -30,9 +30,54 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="1a" class="lead"></p>
     </header>
-    <div class="container-fluid row mx-auto">
+    <div class="container-fluid col time-block">
       <!-- Timeblocks go here -->
-      <ul class="list-group col-2 m-0 p-0" >
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">9 AM</li>
+        <li id = toDo9 class="list-group-item" contenteditable="true">Default</li>
+        <li class="list-group-item"><button onclick="saveToLocal(event)">Save</button></li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">10 AM</li>
+        <li id = toDo10 class="list-group-item" contenteditable="true">Test</li>
+        <li class="list-group-item"><button onclick="saveToLocal10()">Save</button></li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">11 AM</li>
+        <li class="list-group-item" contenteditable="true">A second item</li>
+        <li class="list-group-item"><button>Save</button></li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">12 PM</li>
+        <li class="list-group-item" contenteditable="true">A second item</li>
+        <li class="list-group-item"><button>Save</button></li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">1 PM</li>
+        <li class="list-group-item" contenteditable="true">A second item</li>
+        <li class="list-group-item"><button>Save</button></li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">2 PM</li>
+        <li class="list-group-item" contenteditable="true">A second item</li>
+        <li class="list-group-item"><button>Save</button></li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">3 PM</li>
+        <li class="list-group-item" contenteditable="true">A second item</li>
+        <li class="list-group-item"><button>Save</button></li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">4 PM</li>
+        <li class="list-group-item" contenteditable="true">A second item</li>
+        <li class="list-group-item"><button >Save</button></li>
+      </ul>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">5 PM</li>
+        <li class="list-group-item" contenteditable="true">A second item</li>
+        <li class="list-group-item"><button>Save</button></li>
+      </ul>
+      <!--<ul class="list-group col-2 m-0 p-0" >
         <li id= eightAm class="list-group-item"></li>
         <li id= nineAm class="list-group-item"></li>
         <li id= tenAm class="list-group-item"></li>
@@ -45,7 +90,7 @@
         <li id= fivePm class="list-group-item">5 PM</li>
       </ul>
       <ul class="list-group col-7 m-0 p-0" contenteditable="true">
-        <li class="list-group-item disabled">A disabled item</li>
+        <li class="list-group-item">A disabled item</li>
         <li class="list-group-item" >second column</li>
         <li class="list-group-item" >A third item</li>
         <li class="list-group-item">A fourth item</li>
@@ -67,7 +112,7 @@
         <a href="#" class="list-group-item list-group-item-action">Save</a>
         <a href="#" class="list-group-item list-group-item-action">Save</a>
         <a href="#" class="list-group-item list-group-item-action">Save</a>
-      </ul>
+      </ul>-->
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./script.js"></script>
