@@ -1,7 +1,7 @@
 var currentTime= moment().get('hour');
 console.log (currentTime);
 
-
+var toDo9= document.getElementById("toDo9");//.innerHTML.toString();
 
 
 /*var today = moment();
@@ -14,9 +14,13 @@ $("#1a").text(today.format('MMMM Do YYYY'));
 
 //Entry Point
 function saveToLocal9 () {
-    var toDo9= document.getElementById("toDo9").innerText;
-    //var specificToDo= (event.target.toDo);
-    //localStorage.toDo
+    
+    if (toDo9 !== "null") {
+        localStorage.setItem("task", toDo9.innerHTML.toString());
+    } else {
+        return;
+    }
+    
     console.log(toDo9);
     //localStorage.setItem();
 }
@@ -94,3 +98,19 @@ setInterval(function disableTimeSlot () {
 }, 1000*60);*/
 
 //setInterval(disableTimeSlot, 1000 * 60);
+
+function renderLastToDo (){
+    var lastToDo = localStorage.getItem("task");
+    console.log(lastToDo);
+    if (lastToDo !== "undefined") {
+        toDo9.innerHTML = lastToDo;
+        
+    } else {
+        toDo9.innerHTML = "New Task";
+    }
+}
+function init (){
+    renderLastToDo();
+}
+
+init ();
