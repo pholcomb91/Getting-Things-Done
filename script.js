@@ -1,7 +1,8 @@
 var currentTime= moment().get('hour');
 console.log (currentTime);
 
-var toDo9= document.getElementById("toDo9");//.innerHTML.toString();
+var toDo9= document.getElementById("toDo-9");
+var toDo10= document.getElementById("toDo-10");
 
 
 /*var today = moment();
@@ -15,8 +16,9 @@ $("#1a").text(today.format('MMMM Do YYYY'));
 //Entry Point
 function saveToLocal9 () {
     
-    if (toDo9 !== "null") {
-        localStorage.setItem("task", toDo9.innerHTML.toString());
+    if (toDo9 !== "") {
+        localStorage.setItem("task-9", toDo9.innerHTML.toString());
+        console.log(toDo9.innerHTML.toString());
     } else {
         return;
     }
@@ -24,6 +26,19 @@ function saveToLocal9 () {
     console.log(toDo9);
     //localStorage.setItem();
 }
+function saveToLocal10 () {
+    
+    if (toDo10 !== "null") {
+        localStorage.setItem("task-10", toDo10.innerHTML.toString());
+    } else {
+        return;
+    }
+    
+    console.log(toDo10);
+    //localStorage.setItem();
+}
+
+
 function saveToLocal10 () {
     var toDo10= document.getElementById("toDo10").innerText;
     //event=toDo10.addEventListener('click', setLocal());
@@ -35,6 +50,19 @@ function saveToLocal10 () {
     
     //localStorage.setItem();
 }
+
+//for (var i= 9; i<= 18; i ++) {}
+$(".list-group-horizontal li:nth-child(2)").each(function() {
+    var time= $(this).attr("id").split("-")[1];
+    if (time < currentTime){ 
+        $(this.parentNode).children().addClass("list-group-item-secondary");
+    } else if (time == currentTime) {
+        $(this.parentNode).children().addClass("list-group-item-warning");
+    } else {
+        $(this.parentNode).children().addClass("list-group-item-success");
+    }
+}) 
+
 
 /*var now= moment().format("LT");
 var isDisabled= false;
@@ -99,18 +127,29 @@ setInterval(function disableTimeSlot () {
 
 //setInterval(disableTimeSlot, 1000 * 60);
 
-function renderLastToDo (){
-    var lastToDo = localStorage.getItem("task");
-    console.log(lastToDo);
-    if (lastToDo !== "undefined") {
-        toDo9.innerHTML = lastToDo;
+function renderLastToDo () {
+    //toDo9.innerHTML = localStorage.getItem("task-9");
+
+    var lastToDo = localStorage.getItem("task-9");
+        if (lastToDo !== null) {
+            toDo9.innerHTML= lastToDo;
+        } else {
+            toDo9.innerHTML = "Nothing to do here.";
+        }
         
-    } else {
-        toDo9.innerHTML = "New Task";
-    }
+    var lastToDo = localStorage.getItem("task-10");
+        console.log("nothing stored here yet");
+        if (lastToDo !== "undefined") {
+         toDo9.innerHTML = lastToDo;
+        
+        } else {
+            toDo9.innerHTML = "New Task";
+        }
+
 }
 function init (){
     renderLastToDo();
+    console.log("Init Running");
 }
 
 init ();
